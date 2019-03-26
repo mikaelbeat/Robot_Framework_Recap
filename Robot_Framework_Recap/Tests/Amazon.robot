@@ -12,4 +12,3 @@ User must sign in to check out
     Close Browser
 
 *** Keywords ***
-ff
