@@ -1,7 +1,8 @@
 *** Settings ***
-Library    SeleniumLibrary    
+Library    SeleniumLibrary
 
 *** Variables ***
+${implicit_wait}  20 seconds
 ${browser}  gc
 ${url}  http://www.amazon.com
 ${header}  Your Amazon.com
@@ -21,6 +22,7 @@ ${sign_in_form_header}  Sign in
 User must sign in to check out
     [Documentation]    This is some basic info
     [Tags]    Smoke
+    Set Selenium Implicit Wait    ${implicit_wait}
     Open Browser    about:blank  ${browser}
     Maximize Browser Window
     Go To  ${url}
@@ -28,12 +30,12 @@ User must sign in to check out
     Input Text  ${search_field}  ${search_term}
     Click Button  ${search_button}
     Wait Until Page Contains  ${search_result}
-    Click Image    ${product_link}    
+    Click Image    ${product_link}
     Wait Until Page Contains  ${product_page}
     Click Button  ${add_to_cart_button}
     Wait Until Page Contains  ${added_to_cart_confirmation}
     Click Link  ${proceed_to_checkout_button}
     Page Should Contain  ${sign_in_form_header}
     Close Browser
-    
+
 *** Keywords ***
