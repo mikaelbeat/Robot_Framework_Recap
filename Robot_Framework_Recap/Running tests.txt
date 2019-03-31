@@ -1,0 +1,9 @@
+
+Run single test case
+Robot -d Result tests.robot
+
+Run all tests from tests folder
+Robot -d Results tests
+
+Run tagged tests
+Robot -d Results -i smoke tests.robot
