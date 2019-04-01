@@ -9,7 +9,7 @@ Search for products
     
 
 Enter search term
-    Input Text  id=twotabsearchtextbox  Gantz Omnibus 1
+    Input Text  id=twotabsearchtextbox  ${SEARCH_TERM}
 
 
 Submit search

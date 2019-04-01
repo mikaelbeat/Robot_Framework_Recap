@@ -8,8 +8,10 @@ Suite Teardown    Cleanup testing data
 
 
 *** Variables ***
-${IMPLICIT_WAIT}  20 seconds
-${BROWSER}  gc
+${IMPLICIT_WAIT}    20 seconds
+${BROWSER}    gc
+${START_URL}     http://www.amazon.com
+${SEARCH_TERM}    Gantz Omnibus 1   
 
 
 *** Test Cases ***
