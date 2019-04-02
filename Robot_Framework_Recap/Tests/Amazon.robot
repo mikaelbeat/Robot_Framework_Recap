@@ -8,13 +8,21 @@ Suite Teardown    Cleanup testing data
 
 
 *** Variables ***
-${IMPLICIT_WAIT}    20 seconds
+${IMPLICIT_WAIT}    5 seconds
 ${BROWSER}    gc
 ${START_URL}     http://www.amazon.com
-${SEARCH_TERM}    Gantz Omnibus 1   
+${SEARCH_TERM}    Gantz Omnibus 1
+${EMAIL}    username
+${PASSWORD}    password
 
 
 *** Test Cases ***
+User should not able to log in with invalid credentials
+    AmazonUI.Go to Url
+    AmazonUI.Click login button in topnav
+    AmazonUI.Login with invalid credentials    ${EMAIL}    ${PASSWORD}   
+
+
 User must sign in to check out
     [Documentation]    This is some basic info
     [Tags]    Smoke

@@ -1,5 +1,9 @@
 *** Settings ***
-Library    SeleniumLibrary    
+Library    SeleniumLibrary
+
+
+*** Variables ***
+${SEARCH_RESULT}    //span[contains(text(),'Gantz Omnibus Volume 1')]    
 
 
 *** Keywords ***
@@ -7,4 +11,4 @@ Verify search completed
     Wait Until Page Contains  ${SEARCH_TERM}
     
 Click product link
-    Click Element   //span[contains(text(),'Gantz Omnibus Volume 1')]
+    Click Element    ${SEARCH_RESULT} 
