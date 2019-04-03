@@ -1,0 +1,38 @@
+
+tag[attribute='Value']
+
+
+XPATH
+xpath=//a[@id='Foo']
+
+a tag inside Foo
+xpath=//div[@id='Foo']/a
+
+a tag inside div
+xpath=//div[@id='Foo']/div/a
+
+
+Shortening relative path
+xpath=//div[@id='nav']/form/div[2]/d/input
+
+Can be shortened to, which means get any input tag below class
+xpath=//div[@class='nav']//input
+
+
+CSS
+css=a[id='Foo]
+
+a tag inside Foo
+css=div[id='Foo']>a
+
+a tag inside div
+css=div[id='Foo']>div>a
+
+
+Shortening relative path
+css=//div[id='nav']>form>div[2]>d>input
+
+Can be shortened to, which means get any input tag below class
+css=//div[id='nav'] input
+
+35 -4,41
