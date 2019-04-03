@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.0 on win32)" generated="20190403 09:29:14.419">
+<suite id="s1" name="Amazon" source="C:\Users\petri.ryynanen\git\Robot_Framework_Recap\Robot_Framework_Recap\Tests\amazon.robot">
+<kw name="Insert testing data" library="Common" type="setup">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Inserting testing data</arg>
+</arguments>
+<msg timestamp="20190403 09:29:14.841" level="INFO">Inserting testing data</msg>
+<status status="PASS" starttime="20190403 09:29:14.841" endtime="20190403 09:29:14.841"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:14.840" endtime="20190403 09:29:14.842"></status>
+</kw>
+<test id="s1-t1" name="User should not able to log in with invalid credentials">
+<kw name="Begin web test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:14.845" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190403 09:29:14.845" endtime="20190403 09:29:18.488"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190403 09:29:18.488" endtime="20190403 09:29:19.686"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${IMPLICIT_WAIT}</arg>
+</arguments>
+<status status="PASS" starttime="20190403 09:29:19.686" endtime="20190403 09:29:19.693"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:14.844" endtime="20190403 09:29:19.693"></status>
+</kw>
+<kw name="Go to Url" library="AmazonUI">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:19.701" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" starttime="20190403 09:29:19.700" endtime="20190403 09:29:22.317"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:19.699" endtime="20190403 09:29:22.317"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:19.698" endtime="20190403 09:29:22.317"></status>
+</kw>
+<kw name="Click login button in topnav" library="AmazonUI">
+<kw name="Click login button" library="TopNav">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TOPNAV_LOGIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:22.319" level="INFO">Clicking element '//span[contains(text(),'Hello, Sign in')]'.</msg>
+<status status="PASS" starttime="20190403 09:29:22.319" endtime="20190403 09:29:23.491"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:22.318" endtime="20190403 09:29:23.491"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:22.318" endtime="20190403 09:29:23.491"></status>
+</kw>
+<kw name="Login with invalid credentials" library="AmazonUI">
+<arguments>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+</arguments>
+<kw name="Invalid credentials" library="SignIn">
+<arguments>
+<arg>${email}</arg>
+<arg>${password}</arg>
+</arguments>
+<kw name="Fill email field" library="SignIn">
+<arguments>
+<arg>${email}</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${EMAIL_FIELD}</arg>
+<arg>${email}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:23.500" level="INFO">Typing text 'username' into text field 'id=ap_email'.</msg>
+<status status="PASS" starttime="20190403 09:29:23.498" endtime="20190403 09:29:23.738"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:23.497" endtime="20190403 09:29:23.738"></status>
+</kw>
+<kw name="Fill password field" library="SignIn">
+<arguments>
+<arg>${password}</arg>
+</arguments>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:23.739" level="INFO">Typing password into text field 'id=ap_password'.</msg>
+<status status="PASS" starttime="20190403 09:29:23.739" endtime="20190403 09:29:23.922"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:23.738" endtime="20190403 09:29:23.922"></status>
+</kw>
+<kw name="Click sign in button" library="SignIn">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${SIGNIN_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:23.926" level="INFO">Clicking button 'id=signInSubmit'.</msg>
+<status status="PASS" starttime="20190403 09:29:23.924" endtime="20190403 09:29:25.178"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:23.923" endtime="20190403 09:29:25.179"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>${SIGNIN_MAIN_HEADING}</arg>
+<arg>Sign in</arg>
+</arguments>
+<msg timestamp="20190403 09:29:25.180" level="INFO">Verifying element '//h1' contains exact text 'Sign in'.</msg>
+<status status="PASS" starttime="20190403 09:29:25.179" endtime="20190403 09:29:25.274"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:23.494" endtime="20190403 09:29:25.275"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:23.492" endtime="20190403 09:29:25.275"></status>
+</kw>
+<kw name="End web test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190403 09:29:25.278" endtime="20190403 09:29:27.677"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:25.276" endtime="20190403 09:29:27.677"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:14.842" endtime="20190403 09:29:27.678" critical="yes"></status>
+</test>
+<test id="s1-t2" name="User must sign in to check out">
+<kw name="Begin web test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:27.687" level="INFO">Opening browser 'gc' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190403 09:29:27.687" endtime="20190403 09:29:31.466"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190403 09:29:31.468" endtime="20190403 09:29:32.672"></status>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>${IMPLICIT_WAIT}</arg>
+</arguments>
+<status status="PASS" starttime="20190403 09:29:32.673" endtime="20190403 09:29:32.682"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:27.686" endtime="20190403 09:29:32.683"></status>
+</kw>
+<kw name="Go to Url" library="AmazonUI">
+<kw name="Load" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:32.690" level="INFO">Opening url 'http://www.amazon.com'</msg>
+<status status="PASS" starttime="20190403 09:29:32.690" endtime="20190403 09:29:35.072"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:32.689" endtime="20190403 09:29:35.072"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:32.688" endtime="20190403 09:29:35.073"></status>
+</kw>
+<kw name="Search for products" library="AmazonUI">
+<kw name="Verify page loaded" library="LandingPage">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${YOUR_AMAZON_TOPNAV_LINK}</arg>
+</arguments>
+<status status="PASS" starttime="20190403 09:29:35.078" endtime="20190403 09:29:36.320"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:35.078" endtime="20190403 09:29:36.320"></status>
+</kw>
+<kw name="Search for products in topnav" library="TopNav">
+<kw name="Enter search term" library="TopNav">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BAR}</arg>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:36.322" level="INFO">Typing text 'Gantz Omnibus 1' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20190403 09:29:36.322" endtime="20190403 09:29:36.769"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:36.321" endtime="20190403 09:29:36.770"></status>
+</kw>
+<kw name="Submit search" library="TopNav">
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${TOPNAV_SEARCH_BUTTON}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:36.771" level="INFO">Clicking button '//input[@value='Go']'.</msg>
+<status status="PASS" starttime="20190403 09:29:36.770" endtime="20190403 09:29:39.107"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:36.770" endtime="20190403 09:29:39.107"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:36.321" endtime="20190403 09:29:39.107"></status>
+</kw>
+<kw name="Verify search completed" library="SearchResults">
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>${SEARCH_TERM}</arg>
+</arguments>
+<status status="PASS" starttime="20190403 09:29:39.108" endtime="20190403 09:29:39.163"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:39.108" endtime="20190403 09:29:39.163"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:35.077" endtime="20190403 09:29:39.164"></status>
+</kw>
+<kw name="Select product from search results" library="AmazonUI">
+<kw name="Click product link" library="SearchResults">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${LINK}</arg>
+</arguments>
+<msg timestamp="20190403 09:29:39.170" level="INFO">Clicking link 'Gantz Omnibus Volume 1'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190403 09:29:44.702" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190403 09:29:44.245" endtime="20190403 09:29:44.702"></status>
+</kw>
+<msg timestamp="20190403 09:29:44.707" level="FAIL">Link with locator 'Gantz Omnibus Volume 1' not found.</msg>
+<status status="FAIL" starttime="20190403 09:29:39.170" endtime="20190403 09:29:44.707"></status>
+</kw>
+<status status="FAIL" starttime="20190403 09:29:39.168" endtime="20190403 09:29:44.707"></status>
+</kw>
+<status status="FAIL" starttime="20190403 09:29:39.166" endtime="20190403 09:29:44.707"></status>
+</kw>
+<kw name="End web test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190403 09:29:44.709" endtime="20190403 09:29:47.173"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:44.708" endtime="20190403 09:29:47.173"></status>
+</kw>
+<doc>This is some basic info</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" starttime="20190403 09:29:27.683" endtime="20190403 09:29:47.175" critical="yes">Link with locator 'Gantz Omnibus Volume 1' not found.</status>
+</test>
+<kw name="Cleanup testing data" library="Common" type="teardown">
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Cleaning up the testing dta</arg>
+</arguments>
+<msg timestamp="20190403 09:29:47.185" level="INFO">Cleaning up the testing dta</msg>
+<status status="PASS" starttime="20190403 09:29:47.185" endtime="20190403 09:29:47.187"></status>
+</kw>
+<status status="PASS" starttime="20190403 09:29:47.183" endtime="20190403 09:29:47.187"></status>
+</kw>
+<status status="FAIL" starttime="20190403 09:29:14.426" endtime="20190403 09:29:47.187"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="1">Critical Tests</stat>
+<stat pass="1" fail="1">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1">Smoke</stat>
+</tag>
+<suite>
+<stat pass="1" fail="1" id="s1" name="Amazon">Amazon</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
