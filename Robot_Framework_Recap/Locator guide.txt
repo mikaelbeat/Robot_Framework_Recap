@@ -1,12 +1,13 @@
-
 tag[attribute='Value']
 
 
 XPATH
 xpath=//a[@id='Foo']
 
+
 a tag inside Foo
 xpath=//div[@id='Foo']/a
+
 
 a tag inside div
 xpath=//div[@id='Foo']/div/a
@@ -15,24 +16,62 @@ xpath=//div[@id='Foo']/div/a
 Shortening relative path
 xpath=//div[@id='nav']/form/div[2]/d/input
 
+
 Can be shortened to, which means get any input tag below class
 xpath=//div[@class='nav']//input
+
+
+Starts with
+xpath=//input[type='Submit-12345']
+xpath=//input[starts-with(@type,'Sub')]
+
+
+Ends with
+xpath=//input[type='12345-Submit']
+xpath=//input[ends-with(@type,'Submit')]
+
+
+Contains
+xpath=//input[type='12345-Submit-12345']
+xpath=//input[contains(@type,'Submit')]
+
+xpath=//input[contains(text(),'Some text')]
+xpath=//input[contains(.,'Some text')]
+
+
+*****************************************************************************
 
 
 CSS
 css=a[id='Foo]
 
+
 a tag inside Foo
 css=div[id='Foo']>a
+
 
 a tag inside div
 css=div[id='Foo']>div>a
 
 
 Shortening relative path
-css=//div[id='nav']>form>div[2]>d>input
+css=div[id='nav']>form>div[2]>d>input
+
 
 Can be shortened to, which means get any input tag below class
-css=//div[id='nav'] input
+css=div[id='nav'] input
 
-35 -4,41
+
+Starts with
+css=input[type='Submit-12345']
+css=input[type^='Sub']
+
+
+Ends with
+css=input[type='12345-Submit']
+css=input[type$='Sub']
+
+
+Contains
+css=input[type='12345-Submit-12345']
+css=input[type*='Submit']
