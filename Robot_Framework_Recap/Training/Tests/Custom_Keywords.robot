@@ -1,6 +1,5 @@
 *** Settings ***
-Library    ../CustomLibraries/MyCustomLibrary.py    
-
+Library    MyCustomLibrary    
 
 *** Test Cases ***
 Demo for custom keywords

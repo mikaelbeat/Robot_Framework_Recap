@@ -3,7 +3,7 @@ Documentation  Demonstrate a need for data-driven testing
 Resource  ../Data/InputData.robot
 Resource  ../Resources/Common.robot
 Resource  ../Resources/CarsApp.robot
-Resource    ../Resources/DataManager.robot
+Resource  ../Resources/DataManager.robot
 Test Setup  Common.Begin Web Test
 Test Teardown  Common.End Web Test
 
