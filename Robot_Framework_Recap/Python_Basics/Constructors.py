@@ -12,8 +12,3 @@ class Demo2:
         print(sumOfNumbers)
     
 obj2 = Demo2(50,75)
-
-        
-
-        
-    
