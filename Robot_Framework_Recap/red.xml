@@ -5,8 +5,8 @@
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
     <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
     <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
-    <referencedLibrary type="PYTHON" name="MyCustomLibrary" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/Libraries"/>
-    <referencedLibrary type="PYTHON" name="Csv" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/Libraries"/>
+    <referencedLibrary type="PYTHON" name="UserKeywords" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/User_defined_keywords/Libraries"/>
+    <referencedLibrary type="PYTHON" name="User_keywords" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/User_defined_keywords/Libraries"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
