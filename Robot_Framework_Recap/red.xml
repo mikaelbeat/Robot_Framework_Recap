@@ -2,17 +2,13 @@
 <projectConfiguration>
     <configVersion>2</configVersion>
     <relativeTo>WORKSPACE</relativeTo>
-    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
-    <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
-    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Users/Mikaelbeat/AppData/Local/Programs/Python/Python37-32/Lib/site-packages"/>
-    <referencedLibrary type="PYTHON" name="UserKeywords" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/User_defined_keywords/Libraries"/>
-    <referencedLibrary type="PYTHON" name="User_keywords" path="D:/Git/github/Robot_Framework_Recap/Robot_Framework_Recap/User_defined_keywords/Libraries"/>
+    <referencedLibrary type="PYTHON" name="MyCustomLibrary" path="Robot_Framework_Recap/Python_Basics/Read_data_from_CSV_file/MyCustomLibrary.py"/>
+    <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/ryynapet/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/SeleniumLibrary/__init__.py"/>
+    <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Users/ryynapet/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/DatabaseLibrary/__init__.py"/>
+    <referencedLibrary type="PYTHON" name="User_keywords" path="Robot_Framework_Recap/User_defined_keywords/Libraries/User_keywords.py"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>
     <isValidatedFileSizeCheckingEnabled>true</isValidatedFileSizeCheckingEnabled>
     <validatedFileMaxSize>1024</validatedFileMaxSize>
-    <isReferencedLibrariesAutoReloadEnabled>true</isReferencedLibrariesAutoReloadEnabled>
-    <isReferencedLibrariesAutoDiscoveringEnabled>true</isReferencedLibrariesAutoDiscoveringEnabled>
-    <isLibrariesAutoDiscoveringSummaryWindowEnabled>false</isLibrariesAutoDiscoveringSummaryWindowEnabled>
 </projectConfiguration>
