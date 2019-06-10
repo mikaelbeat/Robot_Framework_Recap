@@ -1,3 +1,2 @@
 
-
 ROBOT -d Results -v BROWSER:gc -v ENVIRONMENT:qa Test.Robot
