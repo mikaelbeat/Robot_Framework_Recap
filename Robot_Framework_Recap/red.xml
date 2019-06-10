@@ -6,6 +6,8 @@
     <referencedLibrary type="PYTHON" name="SeleniumLibrary" path="C:/Users/ryynapet/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/SeleniumLibrary/__init__.py"/>
     <referencedLibrary type="PYTHON" name="DatabaseLibrary" path="C:/Users/ryynapet/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/DatabaseLibrary/__init__.py"/>
     <referencedLibrary type="PYTHON" name="User_keywords" path="Robot_Framework_Recap/User_defined_keywords/Libraries/User_keywords.py"/>
+    <referencedLibrary type="PYTHON" name="Csv" path="Robot_Framework_Recap/Demo/Libraries/Csv.py"/>
+    <referencedLibrary type="PYTHON" name="RequestsLibrary" path="C:/Users/ryynapet/AppData/Local/Programs/Python/Python37-32/Lib/site-packages/RequestsLibrary/__init__.py"/>
     <pythonpath/>
     <classpath/>
     <excludedForValidation/>

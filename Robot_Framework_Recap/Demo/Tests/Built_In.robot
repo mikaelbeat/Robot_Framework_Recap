@@ -9,7 +9,7 @@ Documentation  Checking out the built-in library
 
 *** Variables ***
 ${GLOBAL1} =  I am global variable 1
-${SOME_GLOBAL_DATA}
+${SOME_GLOBAL_DATA}    Data
 
 *** Test Cases ***
 Declare and set variables
@@ -31,7 +31,6 @@ Logging stuff
     Log Many  Something to say 1  Something to say 2  Something to say 3
     Log to Console  This can only be seen in the console, not the log!
     Log Variables  # this should log all the variables in scope
-    Log  ${some_suite_data}
     Log  ${GLOBAL1}
     Log  ${SOME_GLOBAL_DATA}
 
@@ -44,14 +43,12 @@ Ignore failures in this test
     Run Keyword And Continue On Failure  Wait Until Page Contains  More text that doesn't exist
     #Run Keyword And Continue on Failure  Log  ${some_test_data}
 
-    Log  ${some_suite_data}
     Log  ${GLOBAL1}
     Log  ${SOME_GLOBAL_DATA}
     Close Browser
 
 Repeat things
     Repeat Keyword  3 Times  Say Something Funny
-    Log  ${some_suite_data}
     Log  ${GLOBAL1}
     Log  ${SOME_GLOBAL_DATA}
 
